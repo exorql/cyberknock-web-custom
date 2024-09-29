@@ -1,0 +1,45 @@
+
+<section class="bar background-white no-mb">
+  <div class="container">
+
+      <div class="col-md-12">
+          <div class="heading text-center">
+              <h2>Cyber Knockについて
+              </h2>
+          </div>
+
+          <p class="lead">
+            Cyber Knockはエンジニアリングの力で、社会の課題を解決し、より良い未来を創造します。<br>私たちは、Webサイト制作、ソフトウェア開発、そして新たなプロダクト開発を通じて、ビジネスや生活の向上に貢献します。
+          </p>
+
+          <!-- *** BLOG HOMEPAGE *** -->
+
+          <div class="row">
+              {{ $posts := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+              {{ range first 4 $posts.Pages }}
+              <div class="col-md-3 col-sm-6">
+                  <div class="box-image-text blog">
+                      <div class="top">
+                          </div>
+                          <div class="bg"></div>
+                          <div class="text">
+                              <p class="buttons">
+                                  <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fas fa-link"></i> {{ i18n "readMore" }}</a>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- /.box-image-text -->
+
+              </div>
+              {{ end }}
+
+          </div>
+          <!-- /.row -->
+
+          <!-- *** BLOG HOMEPAGE END *** -->
+
+      </div>
+  </div>
+  <!-- /.container -->
+</section>

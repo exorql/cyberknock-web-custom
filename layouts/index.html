@@ -14,15 +14,23 @@
 
         {{ partial "nav.html" . }}
 
-        {{ partial "carousel.html" . }}
+        <div id="home">
+            {{ partial "carousel.html" . }}
+        </div>
 
-        {{ partial "features.html" . }}
+        <div id="home">
+          {{ partial "vision.html" . }}
+        </div>
 
-        {{ partial "testimonials.html" . }}
+        {{ partial "what.html" . }}
 
-        {{ partial "see_more.html" . }}
+        <div id="service">
+            {{ partial "features.html" . }}
+        </div>
 
-        {{ partial "recent_posts.html" . }}
+        <div id="about">
+          {{ partial "about.html" . }}
+        </div>
 
         {{ partial "clients.html" . }}
 
@@ -32,6 +40,19 @@
     <!-- /#all -->
 
     {{ partial "scripts.html" . }}
+
+    <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
 
   </body>
 </html>
