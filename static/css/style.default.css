@@ -1469,6 +1469,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .box-simple p {
   color: #999999;
+  text-align: left;
 }
 .box-simple:hover .icon {
   -webkit-transform: scale(1.1, 1.1);
